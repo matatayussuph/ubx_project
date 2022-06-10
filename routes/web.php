@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\CargoController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +17,14 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/home',[CargoController::class,'create']);
+
+// Route::get('/home','CargoController@create')->name('create');
+
+Route::post('file/import',[CargoController::class,'import']);
+
+Route::get('cargo/view',[CargoController::class,'view'])->name('cargo.view');
+
+// Route::post('cargo/view','CargoController@view')->name('import');
+
