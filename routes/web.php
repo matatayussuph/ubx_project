@@ -14,11 +14,11 @@ use App\Http\Controllers\CargoController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
-Route::get('/home',[CargoController::class,'create']);
+Route::get('/',[CargoController::class,'create']);
 
 // Route::get('/home','CargoController@create')->name('create');
 
